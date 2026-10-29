@@ -1,0 +1,39 @@
+
+{
+  "version": "1.0",
+  "lessons": [
+    {
+      "id": "FIN001",
+      "title": "The Price of Money",
+      "topic": "Interest Rates",
+      "topic_zh": "利率",
+      "level": "Beginner",
+      "duration_minutes": 8,
+      "module": "Financial Foundations",
+      "explanation_en": "An interest rate is the cost of borrowing money or the return earned from lending it.",
+      "explanation_zh": "利率是借入资金的成本，也可以是借出资金所获得的回报。",
+      "key_insight": "Market interest rates and existing fixed-rate bond prices generally move in opposite directions.",
+      "private_banking_application": "Interest rates affect borrowing costs, cash returns, bond prices and client portfolio decisions.",
+      "case": {
+        "id": "CASE001",
+        "client": "Sarah Chen",
+        "background": "A Singapore-based entrepreneur has received USD 1 million from a business sale. She wants capital preservation and stable income.",
+        "question": "What should you do first?",
+        "options": [
+          "Recommend long-term bonds immediately.",
+          "Understand her objectives, liquidity needs, investment horizon and risk tolerance.",
+          "Invest all proceeds in equities."
+        ],
+        "correct_answer": 1,
+        "explanation": "Client discovery and suitability assessment should precede product recommendations.",
+        "communication_example": "Before discussing investment products, I'd like to understand your financial priorities and liquidity needs."
+      },
+      "sources": [
+        {
+          "title": "OpenStax Principles of Economics",
+          "url": "https://openstax.org/"
+        }
+      ]
+    }
+  ]
+}
