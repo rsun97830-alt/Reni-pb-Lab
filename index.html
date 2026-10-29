@@ -454,5 +454,75 @@
       });
     });
   </script>
+  
+<script>
+  async function loadLessons() {
+    try {
+      const response = await fetch('./data/lessons.json');
+
+      if (!response.ok) {
+        throw new Error('Unable to load lessons');
+      }
+
+      const data = await response.json();
+      const lessons = data.lessons;
+
+      const section = document.getElementById('lesson');
+
+      if (!section || !Array.isArray(lessons)) return;
+
+      const container = document.createElement('div');
+      container.style.maxWidth = '820px';
+      container.style.margin = '35px auto';
+
+      const heading = document.createElement('h3');
+      heading.textContent = 'Explore Our Lessons';
+      heading.className = 'serif';
+      heading.style.fontSize = '36px';
+      container.appendChild(heading);
+
+      lessons.forEach(lesson => {
+        const card = document.createElement('div');
+
+        card.style.background = '#ffffff';
+        card.style.border = '1px solid #e4e2dc';
+        card.style.padding = '25px';
+        card.style.marginBottom = '15px';
+
+        const title = document.createElement('h3');
+        title.className = 'serif';
+        title.style.fontSize = '28px';
+        title.textContent = lesson.title;
+
+        const topic = document.createElement('p');
+        topic.textContent =
+          lesson.topic + ' / ' + lesson.topic_zh;
+
+        const explanation = document.createElement('p');
+        explanation.textContent = lesson.explanation_zh;
+
+        const example = document.createElement('p');
+        example.textContent =
+          'Private Banking: ' +
+          lesson.private_banking_application;
+
+        card.appendChild(title);
+        card.appendChild(topic);
+        card.appendChild(explanation);
+        card.appendChild(example);
+
+        container.appendChild(card);
+      });
+
+      section.appendChild(container);
+
+    } catch (error) {
+      console.error('Lesson loading error:', error);
+    }
+  }
+
+  loadLessons();
+</script>
+
 </body>
 </html>
