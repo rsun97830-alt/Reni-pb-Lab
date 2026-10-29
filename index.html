@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReniPB Lab — Learn Private Banking</title>
+  <style>
+    :root {
+      --navy: #14243b;
+      --muted: #687486;
+      --line: #e5e9ef;
+      --bg: #f8f9fb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--navy);
+      background: var(--bg);
+      line-height: 1.65;
+    }
+    header {
+      background: white;
+      border-bottom: 1px solid var(--line);
+      padding: 18px max(5%, calc((100% - 1080px)/2));
+      font-weight: 750;
+      font-size: 20px;
+    }
+    main { max-width: 1080px; margin: auto; padding: 65px 24px; }
+    .eyebrow { color: #59738f; font-size: 13px; letter-spacing: 2px; font-weight: 700; }
+    h1 { font-size: clamp(36px, 6vw, 62px); line-height: 1.12; letter-spacing: -2px; margin: 20px 0; }
+    h2 { font-size: 26px; letter-spacing: -.5px; }
+    p { color: var(--muted); }
+    .hero { max-width: 750px; margin-bottom: 70px; }
+    .button {
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      border: 0;
+      padding: 13px 22px;
+      border-radius: 9px;
+      font: inherit;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 28px;
+    }
+    .tag { font-size: 12px; color: #52749a; font-weight: 700; }
+    .lesson { margin-top: 65px; }
+    .question { margin-top: 22px; }
+    .option {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 15px;
+      margin: 10px 0;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      cursor: pointer;
+      font: inherit;
+      color: var(--navy);
+    }
+    .option:hover { border-color: #6687b3; }
+    .option:focus-visible, .button:focus-visible { outline: 3px solid #80aaff; }
+    #feedback { margin-top: 18px; font-weight: 600; }
+    footer { text-align: center; padding: 35px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 650px) {
+      .grid { grid-template-columns: 1fr; }
+      main { padding-top: 40px; }
+    }
+  </style>
+</head>
+<body>
+  <header>ReniPB Lab<span style="color:#7992ad">.</span></header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">PRIVATE BANKING LEARNING PLATFORM</div>
+      <h1>Finance starts with understanding.</h1>
+      <p>Learn financial concepts. Apply them to real-world-inspired client cases. Build the confidence to think like a Private Banker.</p>
+      <a href="#learn" class="button">Start Learning →</a>
+    </section>
+
+    <section>
+      <h2>Explore ReniPB Lab</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="tag">01 / LEARN</div>
+          <h3>Learning Path</h3>
+          <p>Build your financial knowledge one concept at a time, with a practical case after each lesson.</p>
+          <a href="#learn">Explore lessons →</a>
+        </div>
+        <div class="card">
+          <div class="tag">02 / APPLY</div>
+          <h3>Case Library</h3>
+          <p>Practise client decision-making through fictional Private Banking scenarios.</p>
+          <a href="#case">Try a case →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="lesson" id="learn">
+      <div class="tag">MODULE 01 · FINANCIAL FOUNDATIONS</div>
+      <h2>Lesson 01 — Interest Rates</h2>
+      <div class="card">
+        <h3>What is an interest rate?</h3>
+        <p>An interest rate is the cost of borrowing money or the return earned from lending money.</p>
+        <p>利率是借入资金的成本，也可以是借出资金所获得的回报。</p>
+        <p><strong>Example:</strong> A $10,000 deposit earning 3% simple annual interest generates $300 in one year, before fees and taxes.</p>
+      </div>
+    </section>
+
+    <section class="lesson" id="case">
+      <div class="tag">CLIENT CASE 001 · BEGINNER</div>
+      <h2>Apply What You Learned</h2>
+      <div class="card">
+        <h3>Meet Sarah</h3>
+        <p>Sarah is a Singapore-based entrepreneur. She has recently received $1 million from a business sale and expects interest rates to fall. She wants stable income and capital preservation.</p>
+        <p>Sarah 是一位新加坡企业家。她希望保全本金并获得稳定收入。</p>
+
+        <div class="question">
+          <strong>What should you do first as her Private Banker?</strong>
+          <button class="option" onclick="check('a')">A. Immediately recommend long-term bonds.</button>
+          <button class="option" onclick="check('b')">B. Understand her liquidity needs, goals and investment horizon.</button>
+          <button class="option" onclick="check('c')">C. Recommend investing all her money in equities.</button>
+          <div id="feedback" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>ReniPB Lab · Educational content only · Not investment advice</footer>
+
+  <script>
+    function check(answer) {
+      const feedback = document.getElementById("feedback");
+      if (answer === "b") {
+        feedback.textContent = "Correct. Understanding the client's objectives, liquidity needs and risk profile comes before recommending products.";
+        feedback.style.color = "#23734b";
+      } else {
+        feedback.textContent = "Not quite. A Private Banker should first understand the client's needs and risk profile before discussing specific investments. Try again.";
+        feedback.style.color = "#a44737";
+      }
+    }
+  </script>
+</body>
+</html>
