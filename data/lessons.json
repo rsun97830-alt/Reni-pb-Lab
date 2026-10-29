@@ -1,6 +1,6 @@
-
 {
   "version": "1.0",
+  "description": "ReniPB Lab beginner finance and private banking curriculum; educational use only, not investment advice.",
   "lessons": [
     {
       "id": "FIN001",
@@ -10,30 +10,677 @@
       "level": "Beginner",
       "duration_minutes": 8,
       "module": "Financial Foundations",
-      "explanation_en": "An interest rate is the cost of borrowing money or the return earned from lending it.",
-      "explanation_zh": "利率是借入资金的成本，也可以是借出资金所获得的回报。",
-      "key_insight": "Market interest rates and existing fixed-rate bond prices generally move in opposite directions.",
-      "private_banking_application": "Interest rates affect borrowing costs, cash returns, bond prices and client portfolio decisions.",
+      "explanation_en": "An interest rate is the price paid to borrow money or the return received for lending or depositing it. Central-bank policy influences, but does not uniquely determine, rates faced by clients.",
+      "explanation_zh": "利率是借入资金的成本，也是借出或存入资金可能获得的回报。央行政策会影响市场利率，但客户实际面对的利率还取决于期限、信用风险等因素。",
+      "numerical_example_en": "A USD 10,000 deposit at 3% simple annual interest earns USD 300 over one year before fees and taxes.",
+      "numerical_example_zh": "10,000美元存款按3%年单利计算，一年利息为300美元（未扣除费用及税款）。",
+      "key_insight": "Existing fixed-rate bond prices generally move inversely to market yields, all else equal.",
+      "private_banking_application": "Rates influence deposit returns, borrowing costs, bond valuations and liquidity planning.",
+      "knowledge_checks": [
+        {
+          "question": "If market yields rise, what typically happens to existing fixed-rate bond prices?",
+          "options": [
+            "They rise",
+            "They fall",
+            "They are guaranteed unchanged"
+          ],
+          "correct_answer": 1,
+          "explanation": "Bond prices and market yields generally move inversely."
+        },
+        {
+          "question": "What is simple annual interest on USD 10,000 at 3%?",
+          "options": [
+            "USD 30",
+            "USD 300",
+            "USD 3,000"
+          ],
+          "correct_answer": 1,
+          "explanation": "10,000 × 0.03 = 300."
+        },
+        {
+          "question": "What should precede a product recommendation?",
+          "options": [
+            "Client discovery",
+            "A market forecast alone",
+            "A sales target"
+          ],
+          "correct_answer": 0,
+          "explanation": "Understand the client first."
+        }
+      ],
       "case": {
         "id": "CASE001",
         "client": "Sarah Chen",
-        "background": "A Singapore-based entrepreneur has received USD 1 million from a business sale. She wants capital preservation and stable income.",
-        "question": "What should you do first?",
+        "background": "A Singapore-based entrepreneur has received USD 1 million from selling part of her business. She expects rates to fall and wants income and capital preservation.",
+        "question": "What should you do before suggesting a product?",
         "options": [
-          "Recommend long-term bonds immediately.",
-          "Understand her objectives, liquidity needs, investment horizon and risk tolerance.",
-          "Invest all proceeds in equities."
+          "Buy long-duration bonds immediately.",
+          "Clarify her liquidity needs, time horizon, objectives and risk tolerance.",
+          "Invest the full amount in equities."
         ],
         "correct_answer": 1,
-        "explanation": "Client discovery and suitability assessment should precede product recommendations.",
-        "communication_example": "Before discussing investment products, I'd like to understand your financial priorities and liquidity needs."
+        "explanation": "A rate forecast is not enough to determine suitability. Begin with client discovery and assess risks before considering products.",
+        "communication_example": "Before discussing products, may I understand when you might need this capital and what level of risk you are comfortable taking?"
       },
       "sources": [
         {
-          "title": "OpenStax Principles of Economics",
-          "url": "https://openstax.org/"
+          "title": "OpenStax Principles of Economics (background reference)",
+          "url": "https://openstax.org/subjects/social-sciences"
         }
-      ]
+      ],
+      "content_note": "Original educational summary and fictional scenario; sources are background references, not direct quotations."
+    },
+    {
+      "id": "FIN002",
+      "title": "Protecting Purchasing Power",
+      "topic": "Inflation",
+      "topic_zh": "通货膨胀",
+      "level": "Beginner",
+      "duration_minutes": 8,
+      "module": "Financial Foundations",
+      "explanation_en": "Inflation is a sustained increase in the general price level. It reduces the purchasing power of a fixed amount of money.",
+      "explanation_zh": "通货膨胀是总体物价水平持续上涨，使同样金额的货币能购买的商品和服务减少。",
+      "numerical_example_en": "If prices increase by 4% while savings earn 2%, purchasing power falls by approximately 1.9% over the year: 1.02 / 1.04 − 1.",
+      "numerical_example_zh": "如果物价上涨4%，储蓄收益为2%，实际购买力约下降1.9%（1.02÷1.04−1）。",
+      "key_insight": "Nominal returns and inflation-adjusted real returns are different.",
+      "private_banking_application": "Inflation matters for retirement spending, income targets and long-term financial plans.",
+      "knowledge_checks": [
+        {
+          "question": "What does inflation usually do to cash purchasing power?",
+          "options": [
+            "Reduces it",
+            "Always increases it",
+            "Has no effect"
+          ],
+          "correct_answer": 0,
+          "explanation": "Rising prices reduce the goods a fixed sum can buy."
+        },
+        {
+          "question": "A 2% nominal return with 4% inflation gives an approximate real return of:",
+          "options": [
+            "+6%",
+            "−1.9%",
+            "+2%"
+          ],
+          "correct_answer": 1,
+          "explanation": "1.02 / 1.04 − 1 ≈ −1.9%."
+        },
+        {
+          "question": "Which is a retirement-planning priority?",
+          "options": [
+            "Guaranteed high returns",
+            "Future spending and liquidity needs",
+            "Only last year’s market performance"
+          ],
+          "correct_answer": 1,
+          "explanation": "Spending and liquidity guide suitable planning."
+        }
+      ],
+      "case": {
+        "id": "CASE002",
+        "client": "Mr Lim",
+        "background": "A 63-year-old retiree in Singapore depends on cash savings for living expenses and is worried that everyday costs keep rising.",
+        "question": "What is the most useful first discussion?",
+        "options": [
+          "Promise an investment return above inflation.",
+          "Estimate his future spending needs, liquidity buffer and tolerance for losses.",
+          "Move all his savings into volatile assets."
+        ],
+        "correct_answer": 1,
+        "explanation": "Retirement planning begins with realistic spending, liquidity and risk assessment; no investment can promise inflation-beating returns.",
+        "communication_example": "Could we review your expected spending and how much cash you need to keep readily available?"
+      },
+      "sources": [
+        {
+          "title": "OpenStax Principles of Economics (background reference)",
+          "url": "https://openstax.org/subjects/social-sciences"
+        }
+      ],
+      "content_note": "Original educational summary and fictional scenario; sources are background references, not direct quotations."
+    },
+    {
+      "id": "FIN003",
+      "title": "Reading Central Bank Decisions",
+      "topic": "Central Banks",
+      "topic_zh": "中央银行",
+      "level": "Beginner",
+      "duration_minutes": 8,
+      "module": "Financial Foundations",
+      "explanation_en": "Central banks influence financial conditions through policy rates and other tools. Their decisions respond to inflation, growth and financial stability considerations; market reactions depend on expectations.",
+      "explanation_zh": "央行通过政策利率等工具影响金融环境。决策通常考虑通胀、经济活动和金融稳定；市场反应还取决于决策是否符合预期。",
+      "numerical_example_en": "A 0.25 percentage-point cut changes a policy rate from 4.50% to 4.25%; it does not mean every loan or deposit rate immediately falls by exactly 0.25 points.",
+      "numerical_example_zh": "政策利率下调0.25个百分点，例如从4.50%降至4.25%，并不意味着所有贷款和存款利率都会立即等幅下降。",
+      "key_insight": "Markets price in expectations, so a widely anticipated rate cut may not produce a simple one-directional reaction.",
+      "private_banking_application": "Policy changes affect financing, currency exposure, cash management and investment discussions.",
+      "knowledge_checks": [
+        {
+          "question": "A cut from 4.50% to 4.25% is:",
+          "options": [
+            "25 percentage points",
+            "25 basis points",
+            "2.5 basis points"
+          ],
+          "correct_answer": 1,
+          "explanation": "0.25 percentage point = 25 basis points."
+        },
+        {
+          "question": "Do all deposit rates immediately move one-for-one with a policy rate?",
+          "options": [
+            "Yes",
+            "No",
+            "Only on weekends"
+          ],
+          "correct_answer": 1,
+          "explanation": "Transmission varies across institutions and products."
+        },
+        {
+          "question": "What influences the market reaction to a rate announcement?",
+          "options": [
+            "Expectations",
+            "Only the announcement headline",
+            "The day of the week"
+          ],
+          "correct_answer": 0,
+          "explanation": "Surprises relative to expectations matter."
+        }
+      ],
+      "case": {
+        "id": "CASE003",
+        "client": "Ms Tan",
+        "background": "A client reads that the US Federal Reserve has cut rates and asks whether her entire portfolio will rise.",
+        "question": "How should you respond?",
+        "options": [
+          "Yes, every asset must rise.",
+          "Explain that effects vary by asset, currency and what markets expected.",
+          "Ignore the announcement entirely."
+        ],
+        "correct_answer": 1,
+        "explanation": "A policy change has multiple transmission channels and its market impact depends on prior expectations and portfolio exposures.",
+        "communication_example": "The impact depends on your holdings and on what investors had already anticipated. May we review your exposures?"
+      },
+      "sources": [
+        {
+          "title": "OpenStax Principles of Economics (background reference)",
+          "url": "https://openstax.org/subjects/social-sciences"
+        }
+      ],
+      "content_note": "Original educational summary and fictional scenario; sources are background references, not direct quotations."
+    },
+    {
+      "id": "FIN004",
+      "title": "Owning a Share of a Business",
+      "topic": "Equities",
+      "topic_zh": "股票",
+      "level": "Beginner",
+      "duration_minutes": 8,
+      "module": "Investment Products",
+      "explanation_en": "Equities represent ownership interests in companies. Shareholders may benefit from price appreciation and dividends, but can lose substantial capital.",
+      "explanation_zh": "股票代表对公司的所有权权益。投资者可能获得股价上涨和股息收益，但也可能遭受重大本金损失。",
+      "numerical_example_en": "Buying 100 shares at USD 50 costs USD 5,000. If the price falls to USD 40, the position is worth USD 4,000, excluding dividends, fees and taxes.",
+      "numerical_example_zh": "以每股50美元买入100股共需5,000美元；若跌至40美元，持仓市值为4,000美元（未计股息、费用和税款）。",
+      "key_insight": "Company-specific risk and market-wide risk are different; diversification can reduce, but not eliminate, risk.",
+      "private_banking_application": "A private banker assesses concentration, time horizon and suitability before discussing equities.",
+      "knowledge_checks": [
+        {
+          "question": "What does a common share represent?",
+          "options": [
+            "A guaranteed loan",
+            "An ownership interest",
+            "An insured deposit"
+          ],
+          "correct_answer": 1,
+          "explanation": "Common equity represents ownership."
+        },
+        {
+          "question": "100 shares decline from USD 50 to USD 40. Unrealized change?",
+          "options": [
+            "−USD 1,000",
+            "+USD 1,000",
+            "No change"
+          ],
+          "correct_answer": 0,
+          "explanation": "100 × (40 − 50) = −1,000."
+        },
+        {
+          "question": "Diversification can:",
+          "options": [
+            "Eliminate all losses",
+            "Reduce some company-specific risk",
+            "Guarantee dividends"
+          ],
+          "correct_answer": 1,
+          "explanation": "Diversification cannot eliminate market risk."
+        }
+      ],
+      "case": {
+        "id": "CASE004",
+        "client": "Alex Wong",
+        "background": "A 34-year-old client wants to put 80% of his investable assets into one technology company after a strong rally.",
+        "question": "What should you explore first?",
+        "options": [
+          "Concentration risk, existing holdings and his capacity for losses.",
+          "Only the company’s recent price chart.",
+          "How quickly he can place the trade."
+        ],
+        "correct_answer": 0,
+        "explanation": "A large single-stock position can create significant concentration risk; explore the client’s goals and risk capacity.",
+        "communication_example": "How would a substantial fall in this one stock affect your broader financial plans?"
+      },
+      "sources": [
+        {
+          "title": "CFA Institute investor education (background reference)",
+          "url": "https://www.cfainstitute.org/"
+        }
+      ],
+      "content_note": "Original educational summary and fictional scenario; sources are background references, not direct quotations."
+    },
+    {
+      "id": "FIN005",
+      "title": "Understanding Bonds",
+      "topic": "Bonds",
+      "topic_zh": "债券",
+      "level": "Beginner",
+      "duration_minutes": 8,
+      "module": "Investment Products",
+      "explanation_en": "A bond is a debt instrument. Investors lend money to an issuer in exchange for contractual payments, subject to issuer credit risk and other terms.",
+      "explanation_zh": "债券是一种债务工具。投资者向发行人提供资金，按条款获得利息和本金偿付，但仍承担发行人信用等风险。",
+      "numerical_example_en": "A bond with USD 10,000 face value and a 4% annual coupon pays USD 400 per year if payments are made as scheduled; its market price may differ from face value.",
+      "numerical_example_zh": "面值10,000美元、年票息率4%的债券，在发行人按约付款时每年票息为400美元；市场价格可能不等于面值。",
+      "key_insight": "Bond risks include interest-rate risk, credit risk, liquidity risk and currency risk.",
+      "private_banking_application": "Bond selection should match income needs, duration tolerance and credit-risk capacity.",
+      "knowledge_checks": [
+        {
+          "question": "What is the annual coupon on USD 10,000 at 4%?",
+          "options": [
+            "USD 40",
+            "USD 400",
+            "USD 4,000"
+          ],
+          "correct_answer": 1,
+          "explanation": "10,000 × 0.04 = 400."
+        },
+        {
+          "question": "If market yields rise, a fixed-rate bond price generally:",
+          "options": [
+            "Falls",
+            "Always rises",
+            "Never changes"
+          ],
+          "correct_answer": 0,
+          "explanation": "Yield and price generally move inversely."
+        },
+        {
+          "question": "Which is a bond risk?",
+          "options": [
+            "Credit default",
+            "Guaranteed capital appreciation",
+            "Guaranteed liquidity"
+          ],
+          "correct_answer": 0,
+          "explanation": "Issuers may fail to meet obligations."
+        }
+      ],
+      "case": {
+        "id": "CASE005",
+        "client": "Mrs Koh",
+        "background": "A client nearing retirement wants predictable income and assumes every bond guarantees her principal.",
+        "question": "What should you explain?",
+        "options": [
+          "All bonds are risk-free.",
+          "Bond income and principal depend on issuer, terms and market risks.",
+          "Longer maturities always mean lower risk."
+        ],
+        "correct_answer": 1,
+        "explanation": "Bonds are not universally guaranteed; explain issuer credit quality, price sensitivity and liquidity.",
+        "communication_example": "Bonds can provide income, but their risks vary. Let us review the issuer and maturity before deciding what fits."
+      },
+      "sources": [
+        {
+          "title": "CFA Institute investor education (background reference)",
+          "url": "https://www.cfainstitute.org/"
+        }
+      ],
+      "content_note": "Original educational summary and fictional scenario; sources are background references, not direct quotations."
+    },
+    {
+      "id": "FIN006",
+      "title": "Investing Through a Basket",
+      "topic": "ETFs",
+      "topic_zh": "交易所交易基金",
+      "level": "Beginner",
+      "duration_minutes": 8,
+      "module": "Investment Products",
+      "explanation_en": "An exchange-traded fund (ETF) is a fund whose shares trade on an exchange. ETFs may track an index or follow other strategies; costs, holdings and risks vary.",
+      "explanation_zh": "交易所交易基金（ETF）是在交易所买卖的基金份额。ETF可能追踪指数，也可能采用其他策略；费用、持仓与风险各不相同。",
+      "numerical_example_en": "An ETF with a 0.20% annual expense ratio represents about USD 20 of annual fund expenses per USD 10,000 invested, before market movements and other trading costs.",
+      "numerical_example_zh": "年费率0.20%的ETF，按10,000美元投资额粗略对应每年20美元基金费用，另有交易成本和市场涨跌影响。",
+      "key_insight": "An ETF is not automatically diversified or low-risk; inspect its underlying holdings and structure.",
+      "private_banking_application": "ETFs can provide efficient exposures, but suitability depends on index, concentration, currency and liquidity.",
+      "knowledge_checks": [
+        {
+          "question": "What does ETF stand for?",
+          "options": [
+            "Exchange-Traded Fund",
+            "Equity Transfer Facility",
+            "External Treasury Fund"
+          ],
+          "correct_answer": 0,
+          "explanation": "ETF means exchange-traded fund."
+        },
+        {
+          "question": "An expense ratio of 0.20% on USD 10,000 is approximately:",
+          "options": [
+            "USD 2",
+            "USD 20",
+            "USD 200"
+          ],
+          "correct_answer": 1,
+          "explanation": "10,000 × 0.002 = 20."
+        },
+        {
+          "question": "Does every ETF provide broad diversification?",
+          "options": [
+            "Yes",
+            "No",
+            "Only ETFs in USD"
+          ],
+          "correct_answer": 1,
+          "explanation": "Some ETFs track narrow sectors or use leverage."
+        }
+      ],
+      "case": {
+        "id": "CASE006",
+        "client": "Daniel Lee",
+        "background": "A beginner investor wants broad equity exposure and asks whether any ETF is safe because it holds multiple securities.",
+        "question": "What is the best next step?",
+        "options": [
+          "Confirm every ETF is safe.",
+          "Review its underlying holdings, concentration, costs and risk level.",
+          "Choose the ETF with the highest recent return."
+        ],
+        "correct_answer": 1,
+        "explanation": "Some ETFs are concentrated, leveraged or complex. Assess the actual portfolio and the client’s needs.",
+        "communication_example": "Let us look at what the ETF owns, its costs and how it might behave in a market decline."
+      },
+      "sources": [
+        {
+          "title": "CFA Institute investor education (background reference)",
+          "url": "https://www.cfainstitute.org/"
+        }
+      ],
+      "content_note": "Original educational summary and fictional scenario; sources are background references, not direct quotations."
+    },
+    {
+      "id": "FIN007",
+      "title": "Balancing Risk and Return",
+      "topic": "Risk & Return",
+      "topic_zh": "风险与收益",
+      "level": "Beginner",
+      "duration_minutes": 8,
+      "module": "Portfolio Fundamentals",
+      "explanation_en": "Expected return is uncertain, while risk describes potential deviations and losses. Higher expected return commonly requires accepting greater risk, but higher risk does not guarantee higher return.",
+      "explanation_zh": "预期收益存在不确定性，风险包括收益波动及发生损失的可能。较高预期收益通常伴随较高风险，但承担更多风险并不保证获得更高收益。",
+      "numerical_example_en": "A portfolio losing 20% must subsequently gain 25% to recover its original value: 80 × 1.25 = 100.",
+      "numerical_example_zh": "投资组合下跌20%后，需要上涨25%才能回到原值：80×1.25=100。",
+      "key_insight": "Risk tolerance (willingness) and risk capacity (financial ability) are not identical.",
+      "private_banking_application": "Private bankers consider willingness, capacity, objectives and constraints together.",
+      "knowledge_checks": [
+        {
+          "question": "After a 20% loss, the gain required to break even is:",
+          "options": [
+            "20%",
+            "25%",
+            "40%"
+          ],
+          "correct_answer": 1,
+          "explanation": "A fall from 100 to 80 needs 20/80 = 25% recovery."
+        },
+        {
+          "question": "Does more risk guarantee more return?",
+          "options": [
+            "Yes",
+            "No",
+            "Only for stocks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Risk is uncertainty, not a promise of return."
+        },
+        {
+          "question": "Risk capacity refers to:",
+          "options": [
+            "Ability to absorb losses",
+            "Favourite investment",
+            "Recent market sentiment"
+          ],
+          "correct_answer": 0,
+          "explanation": "Capacity concerns financial resilience."
+        }
+      ],
+      "case": {
+        "id": "CASE007",
+        "client": "Nadia",
+        "background": "A client says she wants 12% annual returns but cannot accept any loss of principal.",
+        "question": "How should you proceed?",
+        "options": [
+          "Promise 12% with no risk.",
+          "Explain the trade-off and clarify what losses she could tolerate or afford.",
+          "Recommend leverage immediately."
+        ],
+        "correct_answer": 1,
+        "explanation": "The stated objectives conflict. Clarify expectations and distinguish capacity from willingness to take risk.",
+        "communication_example": "We should discuss the trade-off between return potential and the possibility of loss before selecting an approach."
+      },
+      "sources": [
+        {
+          "title": "CFA Institute investor education (background reference)",
+          "url": "https://www.cfainstitute.org/"
+        }
+      ],
+      "content_note": "Original educational summary and fictional scenario; sources are background references, not direct quotations."
+    },
+    {
+      "id": "FIN008",
+      "title": "Building a Portfolio Around Goals",
+      "topic": "Asset Allocation",
+      "topic_zh": "资产配置",
+      "level": "Beginner",
+      "duration_minutes": 8,
+      "module": "Portfolio Fundamentals",
+      "explanation_en": "Asset allocation divides a portfolio among asset classes such as cash, bonds and equities. It reflects goals, time horizon, liquidity needs and risk profile.",
+      "explanation_zh": "资产配置是将资金分配到现金、债券、股票等资产类别的过程，应与目标、期限、流动性需求及风险特征相匹配。",
+      "numerical_example_en": "A hypothetical USD 1 million portfolio allocated 20% to cash, 40% to bonds and 40% to equities has USD 200,000, USD 400,000 and USD 400,000 respectively. This is arithmetic, not a recommendation.",
+      "numerical_example_zh": "假设100万美元组合按现金20%、债券40%、股票40%分配，对应20万、40万、40万美元。这只是计算示例，不是投资建议。",
+      "key_insight": "Asset allocation and diversification are related but not interchangeable; allocations need periodic review.",
+      "private_banking_application": "A banker connects allocations to the client’s funding needs, constraints and changing circumstances.",
+      "knowledge_checks": [
+        {
+          "question": "40% of USD 1 million equals:",
+          "options": [
+            "USD 40,000",
+            "USD 400,000",
+            "USD 4 million"
+          ],
+          "correct_answer": 1,
+          "explanation": "1,000,000 × 0.40 = 400,000."
+        },
+        {
+          "question": "Asset allocation should primarily reflect:",
+          "options": [
+            "Client objectives and constraints",
+            "Only recent returns",
+            "A friend’s portfolio"
+          ],
+          "correct_answer": 0,
+          "explanation": "Allocation is driven by client needs."
+        },
+        {
+          "question": "Is diversification a guarantee against losses?",
+          "options": [
+            "Yes",
+            "No",
+            "Only in retirement"
+          ],
+          "correct_answer": 1,
+          "explanation": "Diversification reduces some risks but cannot guarantee outcomes."
+        }
+      ],
+      "case": {
+        "id": "CASE008",
+        "client": "Sarah Chen",
+        "background": "After selling part of her company, Sarah asks for a portfolio proposal but has not described her future business commitments.",
+        "question": "What information is most important before constructing allocations?",
+        "options": [
+          "Her future cash obligations, goals, risk profile and existing exposures.",
+          "Only the highest-return asset class.",
+          "A model allocation copied from another client."
+        ],
+        "correct_answer": 0,
+        "explanation": "Asset allocation is client-specific and must account for liquidity, concentration and objectives.",
+        "communication_example": "Before considering an allocation, could we map your upcoming cash commitments and existing investments?"
+      },
+      "sources": [
+        {
+          "title": "CFA Institute investor education (background reference)",
+          "url": "https://www.cfainstitute.org/"
+        }
+      ],
+      "content_note": "Original educational summary and fictional scenario; sources are background references, not direct quotations."
+    },
+    {
+      "id": "FIN009",
+      "title": "Understanding the Person Behind the Portfolio",
+      "topic": "Client Profiling",
+      "topic_zh": "客户画像",
+      "level": "Beginner",
+      "duration_minutes": 8,
+      "module": "Private Banking Fundamentals",
+      "explanation_en": "Client profiling gathers information about objectives, financial circumstances, experience, risk tolerance, risk capacity, time horizon and liquidity needs.",
+      "explanation_zh": "客户画像旨在了解客户目标、财务状况、投资经验、风险意愿、风险承受能力、投资期限和流动性需求。",
+      "numerical_example_en": "A client may have USD 5 million in total wealth but only USD 200,000 available for near-term investing because much of the wealth is tied up in a private business.",
+      "numerical_example_zh": "客户总财富可能有500万美元，但大量资金投入非上市企业，近期可动用资金可能仅有20万美元。",
+      "key_insight": "Net worth is not the same as investable liquidity; respectful questions and documentation matter.",
+      "private_banking_application": "Discovery meetings help avoid inappropriate product-led conversations and build trust.",
+      "knowledge_checks": [
+        {
+          "question": "Does high net worth always imply high liquidity?",
+          "options": [
+            "Yes",
+            "No",
+            "Only for entrepreneurs"
+          ],
+          "correct_answer": 1,
+          "explanation": "Illiquid assets may dominate net worth."
+        },
+        {
+          "question": "A useful discovery topic is:",
+          "options": [
+            "Investment horizon",
+            "Favourite colour",
+            "Social media password"
+          ],
+          "correct_answer": 0,
+          "explanation": "Time horizon affects suitability."
+        },
+        {
+          "question": "What builds a responsible client profile?",
+          "options": [
+            "Documented goals and constraints",
+            "Assumptions from age alone",
+            "Only a risk score"
+          ],
+          "correct_answer": 0,
+          "explanation": "A profile requires a broad, documented picture."
+        }
+      ],
+      "case": {
+        "id": "CASE009",
+        "client": "Mr Ong",
+        "background": "A new client owns several properties and a private company. He says he is wealthy and wants to invest immediately.",
+        "question": "What should your first meeting focus on?",
+        "options": [
+          "A product pitch.",
+          "Understanding his goals, liquidity, obligations, experience and existing exposures.",
+          "Requesting his passwords."
+        ],
+        "correct_answer": 1,
+        "explanation": "Wealth on paper may be illiquid. Begin with appropriate discovery and avoid collecting unnecessary sensitive information.",
+        "communication_example": "Could you walk me through your priorities and which assets are available for investment?"
+      },
+      "sources": [
+        {
+          "title": "CFA Institute investor education (background reference)",
+          "url": "https://www.cfainstitute.org/"
+        }
+      ],
+      "content_note": "Original educational summary and fictional scenario; sources are background references, not direct quotations."
+    },
+    {
+      "id": "FIN010",
+      "title": "Putting Client Suitability First",
+      "topic": "Suitability",
+      "topic_zh": "投资适当性",
+      "level": "Beginner",
+      "duration_minutes": 8,
+      "module": "Private Banking Fundamentals",
+      "explanation_en": "Suitability means assessing whether a product or strategy fits a client’s circumstances, objectives, knowledge, experience and risk profile, subject to applicable rules.",
+      "explanation_zh": "投资适当性是依据适用法规和客户目标、财务状况、知识经验及风险特征，评估产品或策略是否适合客户。",
+      "numerical_example_en": "A product with potential 30% drawdowns may be unsuitable for a client who needs the funds for a home purchase in six months, even if its long-run expected return appears attractive.",
+      "numerical_example_zh": "若客户六个月后需要购房资金，可能出现30%回撤的产品即使长期预期收益较高，也可能不适合该用途。",
+      "key_insight": "A product’s popularity or high projected return does not establish suitability; regulatory requirements differ by jurisdiction.",
+      "private_banking_application": "Bankers must assess and document relevant client needs and product risks before recommendations.",
+      "knowledge_checks": [
+        {
+          "question": "Is a popular product automatically suitable?",
+          "options": [
+            "Yes",
+            "No",
+            "If advertised by a bank"
+          ],
+          "correct_answer": 1,
+          "explanation": "Suitability is client-specific."
+        },
+        {
+          "question": "Which feature matters for a near-term tuition payment?",
+          "options": [
+            "Liquidity",
+            "Logo colour",
+            "Last week’s performance only"
+          ],
+          "correct_answer": 0,
+          "explanation": "Funds must be accessible when required."
+        },
+        {
+          "question": "Do suitability obligations vary across jurisdictions?",
+          "options": [
+            "No",
+            "Yes",
+            "Only for stocks"
+          ],
+          "correct_answer": 1,
+          "explanation": "Applicable regulatory requirements differ by market."
+        }
+      ],
+      "case": {
+        "id": "CASE010",
+        "client": "Ms Patel",
+        "background": "A client needs money for university tuition next year but asks about a complex illiquid investment marketed as high-return.",
+        "question": "What should you do?",
+        "options": [
+          "Recommend it because of the projected return.",
+          "Explain liquidity and loss risks, assess suitability and consider the upcoming payment need.",
+          "Skip the risk discussion."
+        ],
+        "correct_answer": 1,
+        "explanation": "The near-term obligation and illiquidity may conflict; assess product features and the client’s situation before proceeding.",
+        "communication_example": "Because this money is needed next year, let us first discuss liquidity and potential losses."
+      },
+      "sources": [
+        {
+          "title": "CFA Institute investor education (background reference)",
+          "url": "https://www.cfainstitute.org/"
+        }
+      ],
+      "content_note": "Original educational summary and fictional scenario; sources are background references, not direct quotations."
     }
   ]
 }
