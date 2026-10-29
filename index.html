@@ -356,40 +356,18 @@
     </div>
   </section>
 
-  <section class="section" id="lesson">
-    <div class="eyebrow">Module 01 / Financial Foundations</div>
-    <h2 class="serif">The price of money.</h2>
+<section class="section" id="lesson">
+  <div class="eyebrow">THE LEARNING ACADEMY</div>
+  <h2 class="serif">Learn. Apply. Reflect.</h2>
+  <p class="section-intro">
+    Every financial concept comes with a practical
+    Private Banking client case.
+  </p>
+  <div id="lesson-list"></div>
+</section>
 
-    <div class="lesson">
-      <h3 class="serif">Understanding Interest Rates</h3>
 
-      <div class="definition">
-        <strong>Interest Rate / 利率</strong>
-        <p>
-          An interest rate is the cost of borrowing money
-          or the return earned from lending it.
-        </p>
-        <p>
-          利率是借入资金的成本，也可以是借出资金所获得的回报。
-        </p>
-      </div>
-
-      <p>
-        If you deposit $10,000 at 3% simple annual interest,
-        you earn $300 in one year before fees and taxes.
-      </p>
-
-      <p>
-        For a Private Banker, interest rates matter because
-        they influence clients' borrowing costs, cash holdings,
-        and bond investments.
-      </p>
-
-      <a href="#cases" class="card-link">Apply this knowledge to a client case ↗</a>
-    </div>
-  </section>
-
-  <section class="section" id="cases">
+<section class="section" id="cases">
     <div class="eyebrow">02 / Apply</div>
     <h2 class="serif">Meet Sarah.</h2>
 
@@ -455,74 +433,152 @@
     });
   </script>
   
-<script>
-  async function loadLessons() {
-    try {
-      const response = await fetch('./data/lessons.json');
 
-      if (!response.ok) {
-        throw new Error('Unable to load lessons');
+<script>
+async function loadLessons() {
+  const container = document.getElementById('lesson-list');
+  if (!container) return;
+
+  container.textContent = 'Loading lessons...';
+
+  try {
+    const response = await fetch('./data/lessons.json');
+
+    if (!response.ok) {
+      throw new Error('Failed to load lessons');
+    }
+
+    const data = await response.json();
+
+    if (!Array.isArray(data.lessons)) {
+      throw new Error('Invalid lesson data');
+    }
+
+    container.replaceChildren();
+
+    data.lessons.forEach((lesson, lessonIndex) => {
+      const card = document.createElement('article');
+      card.className = 'card';
+      card.style.marginTop = '25px';
+
+      const label = document.createElement('div');
+      label.className = 'eyebrow';
+      label.textContent =
+        `LESSON ${String(lessonIndex + 1).padStart(2, '0')}`;
+
+      const title = document.createElement('h3');
+      title.className = 'serif';
+      title.textContent = lesson.title;
+
+      const topic = document.createElement('p');
+      topic.textContent =
+        `${lesson.topic} / ${lesson.topic_zh}`;
+
+      const explanationEn = document.createElement('p');
+      explanationEn.textContent = lesson.explanation_en;
+
+      const explanationZh = document.createElement('p');
+      explanationZh.textContent = lesson.explanation_zh;
+
+      const insight = document.createElement('p');
+      insight.textContent =
+        'Key insight: ' + lesson.key_insight;
+
+      card.append(
+        label,
+        title,
+        topic,
+        explanationEn,
+        explanationZh,
+        insight
+      );
+
+      if (lesson.case) {
+        const caseTitle = document.createElement('h3');
+        caseTitle.className = 'serif';
+        caseTitle.textContent = 'Apply — Client Case';
+
+        const background = document.createElement('p');
+        background.textContent = lesson.case.background;
+
+        const question = document.createElement('p');
+        const strong = document.createElement('strong');
+        strong.textContent = lesson.case.question;
+        question.appendChild(strong);
+
+        const feedback = document.createElement('div');
+        feedback.setAttribute('role', 'status');
+        feedback.setAttribute('aria-live', 'polite');
+        feedback.style.marginTop = '18px';
+        feedback.style.lineHeight = '1.8';
+
+        const options = document.createElement('div');
+
+        lesson.case.options.forEach((option, index) => {
+          const button = document.createElement('button');
+          button.className = 'option';
+
+          button.textContent =
+            String.fromCharCode(65 + index) + '. ' + option;
+
+          button.addEventListener('click', () => {
+            const correct =
+              index === lesson.case.correct_answer;
+
+            feedback.textContent =
+              (correct ? 'Correct. ' : 'Not quite. ') +
+              lesson.case.explanation;
+
+            feedback.style.color =
+              correct ? '#36744c' : '#a35d48';
+
+            options.querySelectorAll('button').forEach(item => {
+              item.style.borderColor = '';
+              item.style.background = '';
+            });
+
+            button.style.borderColor =
+              correct ? '#36744c' : '#a35d48';
+
+            button.style.background =
+              correct ? '#eef4ee' : '#faf0ec';
+
+            if (correct) {
+              const communication = document.createElement('p');
+
+              communication.textContent =
+                'Professional English: ' +
+                lesson.case.communication_example;
+
+              feedback.appendChild(communication);
+            }
+          });
+
+          options.appendChild(button);
+        });
+
+        card.append(
+          caseTitle,
+          background,
+          question,
+          options,
+          feedback
+        );
       }
 
-      const data = await response.json();
-      const lessons = data.lessons;
+      container.appendChild(card);
+    });
 
-      const section = document.getElementById('lesson');
-
-      if (!section || !Array.isArray(lessons)) return;
-
-      const container = document.createElement('div');
-      container.style.maxWidth = '820px';
-      container.style.margin = '35px auto';
-
-      const heading = document.createElement('h3');
-      heading.textContent = 'Explore Our Lessons';
-      heading.className = 'serif';
-      heading.style.fontSize = '36px';
-      container.appendChild(heading);
-
-      lessons.forEach(lesson => {
-        const card = document.createElement('div');
-
-        card.style.background = '#ffffff';
-        card.style.border = '1px solid #e4e2dc';
-        card.style.padding = '25px';
-        card.style.marginBottom = '15px';
-
-        const title = document.createElement('h3');
-        title.className = 'serif';
-        title.style.fontSize = '28px';
-        title.textContent = lesson.title;
-
-        const topic = document.createElement('p');
-        topic.textContent =
-          lesson.topic + ' / ' + lesson.topic_zh;
-
-        const explanation = document.createElement('p');
-        explanation.textContent = lesson.explanation_zh;
-
-        const example = document.createElement('p');
-        example.textContent =
-          'Private Banking: ' +
-          lesson.private_banking_application;
-
-        card.appendChild(title);
-        card.appendChild(topic);
-        card.appendChild(explanation);
-        card.appendChild(example);
-
-        container.appendChild(card);
-      });
-
-      section.appendChild(container);
-
-    } catch (error) {
-      console.error('Lesson loading error:', error);
-    }
+  } catch (error) {
+    console.error(error);
+    container.textContent =
+      'Unable to load lessons. Please refresh the page.';
   }
+}
 
-  loadLessons();
+loadLessons();
 </script>
+
 
 </body>
 </html>
